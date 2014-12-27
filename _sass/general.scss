@@ -1,12 +1,17 @@
 //
+font: {
+  color: #eee;
+}
+
+//
 h1{
-  color: red;
 }
 
 //
 .flex-parent{
   display: flex;
   .flex-child{
-    background: #cff;
+    background: #fcc;
+    display: inline-block;
   }
 }
