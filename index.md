@@ -11,6 +11,8 @@ categories
 
 {{ site.categories }}
 
+{{ site.posts }}
+
 <p id='id-sample' class='class-sample'>Sample Text</p>
 
 ### Flex Sample
