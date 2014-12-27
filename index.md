@@ -6,4 +6,4 @@ title: Home
 
 ##categories
 
-{{ site.posts }}
+{{ site.categories }}
