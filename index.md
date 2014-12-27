@@ -4,4 +4,4 @@ title: Home
 ---
 #Yusai Works Home Page
 ##categories
-{{ site }}
+{{ site.posts }}
