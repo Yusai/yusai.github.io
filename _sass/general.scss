@@ -1,19 +1,43 @@
 //
-body{
+$mobile-width: 480px;
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+//
+.font-h2 {
   font: {
-    color: #eee;
+    weight: bold;
+    size: 120%;
+  };
+}
+
+//
+body {
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+article {
+  padding: 0.5em;
+}
+
+//
+.flex-parent {
+  @include mobile {
+    display: flex;
+  }
+  
+  padding: 0;
+  
+  > li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
 //
-h1{
-}
-
-//
-.flex-parent{
-  display: flex;
-  .flex-child{
-    background: #fcc;
-    display: inline-block;
-  }
-}
