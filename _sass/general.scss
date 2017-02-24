@@ -1,43 +1,72 @@
-//
-$mobile-width: 480px;
-@mixin mobile {
-  @media (min-width: #{$mobile-width}) {
-    @content;
+$black: #302833;
+$link: #e5abbe;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 2vmax;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+  color: white;
+  max-width: 66.7vmax;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: $black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
+}
+
+.small {
+  size: 1vmax;
+}
+
+#menu {
+  font-weight: 900;
+  font-size: 5vmax;
+  margin: 0;
+  flex-grow: 1;
+  @extend .flex-center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu-list {
+  flex-grow: 10;
+  margin-bottom: 5vmax;
+  @extend .flex-center;
+  ul {
+    @extend .center;
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    padding: 1vmax 0;
   }
 }
 
-//
-.font-h2 {
-  font: {
-    weight: bold;
-    size: 120%;
-  };
-}
-
-//
-body {
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto;
+a {
+  text-decoration: none;
+  color: $link;
+  border-left: 0.5em solid $link;
+  padding-left: 1em;
 }
 
 article {
-  padding: 0.5em;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-bottom-right-radius: 1vmax;
+  border-bottom-left-radius: 1vmax;
 }
-
-//
-.flex-parent {
-  @include mobile {
-    display: flex;
-  }
-  
-  padding: 0;
-  
-  > li {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-//

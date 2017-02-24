@@ -1,23 +1,9 @@
-nav {
-    .flex-parent {
-        margin-top: 0;
-        .flex-child {
-            @extend .font-h2;
-            //
-            text-align: center;
-            padding: 1px 2px;
-            //
-            a {
-                background: #302833;
-                display: block;
-                padding: 12px;
-                text-decoration: none;
-                color: white;
-                //
-                :hover {
-                    background: #544a47;
-                }
-            }
-        }
+header {
+    padding: 0.5vmax 0;
+    p {
+        margin: 0;
+        @extend .center;
+        font-weight: 900;
+        @extend .small;
     }
 }

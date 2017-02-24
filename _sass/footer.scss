@@ -1,11 +1,14 @@
 footer {
-    margin: 1em 0.5em;
-    border-top: 1px solid #494a41;
+    margin: 0.5vmax 0;
+    p {
+        margin: 0;
+    }
 }
 
 #copy {
+    @extend .small;
     font: {
-        size: 80%;
+        weight: 900;
     };
-    text-align: center;
+    @extend .center;
 }
