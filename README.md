@@ -1,4 +1,7 @@
-[yusai.github.io](http://yusai.github.io/)
-===============
+[Yusai Works](http://yusai.github.io/)
 
-Especially without any purpose.
+* [blog](https://yusai-blog.blogspot.com/)
+* [Design Collection](https://yusai.github.io/design-collection/)
+* [Template for Inkscape](https://yusai.github.io/template-for-inkscape/)
+
+@Yusai Works
