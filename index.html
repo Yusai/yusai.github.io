@@ -7,9 +7,9 @@
 <style type="text/css">
 body {
     min-height: 100vh;
-    background: #333;
-    color: white;
+    background: white;
     margin: 0;
+    font-size: 2vmin;
 }
 
 .column {
@@ -17,48 +17,161 @@ body {
     flex-direction: column;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
     font-size: 3vmin;
+}
+
+h2 {
+    text-align: center;
+    color: deepskyblue;
+    font-size: 2.5vmin;
+}
+
+#main {
+    flex-grow: 1;
+}
+
+#main > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 5vmin;
-    flex-grow: 1;
+    font-size: 3.5vmin;
     justify-content: center;
 }
 
 li {
     text-align: center;
-    line-height: 2.5em;
+    line-height: 2.25em;
 }
 
 a {
     text-decoration: none;
-    color: lightskyblue;
+    color: lightseagreen;
 }
 
 footer {
     text-align: center;
-    font-size: 2vmin;
 }
+
+#donate{
+}
+
+#donate.hide {
+    display: none;
+}
+
+#donate ul {
+    font-size: 1.75vmin;
+}
+
+#donate dt {
+    font-weight: bold;
+}
+
+#donate dt, #donate dd {
+    display: inline-block;
+}
+
+#donate dt::after {
+    content: ':';
+    margin: 0 0.5em;
+}
+
+#donate dt, #donate dt a{
+    color: mediumvioletred;
+}
+
+#donate dl, #donate dd {
+    margin: 0;
+}
+
+.btn_copy {
+    background: mediumvioletred;
+    color: white;
+    border-radius: 10%;
+    padding: 0.2em 0.5em;
+    margin-left: 0.5em;
+    font-size: 1.25vmin;
+    font-weight: bold;
+}
+
 </style>
 </head>
 <body class='column'>
 	<header>
-		<h1>MENU</h1>
+		<h1>Yusai Works</h1>
 	</header>
-	<ul class='column'>
-		<li><a href="https://yusai-blog.blogspot.com/">Blog</a></li>
-		<li><a href="https://yusai.github.io/design-collection/">Design Collection</a></li>
-		<li><a href="https://yusai.github.io/template-for-inkscape/">Template for Inkscape</a></li>
-        <li><a href="https://yusai.github.io/katagami/">KATAGAMI</a></li>
-	</ul>
+    <div id='main' class='column'>
+        <div id='menu'>
+            <h2>MENU</h2>
+            <ul class='column'>
+                <li><a href="https://yusai.github.io/design-collection/">Design Collection</a></li>
+                <li><a href="https://yusai.github.io/katagami/">KATAGAMI</a></li>
+                <li><a href="https://yusai.github.io/template-for-inkscape/">Template for Inkscape</a></li>
+            </ul>
+        </div>
+        <div id='source'>
+            <h2>Source</h2>
+            <ul class='column'>
+                <li><a href="https://digitalcollections.nypl.org/">DIGITAL COLLECTIONS</a></li>
+                <li><a href="https://commons.m.wikimedia.org/wiki/Category:Handbook_of_Ornament_(1900)_illustrations">Handbook of Ornament (1900) illustrations</a></li>
+                <li><a href="http://alana.io/">alana.io</a></li>
+            </ul>
+        </div>
+        <div id='donate' class='hide'>
+            <h2>Donate</h2>
+            <div>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>Bitcoin</dt><dd><span id='address_btc'>1GVTEWxdUqMrySvZE4ASj6nvYFxHFZsvei</span><span class='btn_copy' data-clipboard-target="#address_btc">copy</span></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href='https://monacoin.org/'>MONACOIN</a></dt><dd><span id='address_mona'>MSBUsoYEzprfim8P2q9N7HjhnnyC3cf5vt</span><span class='btn_copy' data-clipboard-target="#address_mona">copy</span></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="http://counterparty.io/">Counterparty</a></dt><dd><span id='address_xcp'>16AWXHfKjozsNTakoLUjwwEsG78CyUUktZ</span><span class='btn_copy' data-clipboard-target="#address_xcp">copy</span></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <p class='bold center'>Thanks for your support.</p>
+            </div>
+        </div>
+    </div>
 	<footer>
-		<p>@Yusai Works</p>
+		<p class='bold'>@Yusai Works - <a href='https://github.com/yusai'>GitHub</a>/<a href="https://yusai-blog.blogspot.com/">Blog</a></p>
 	</footer>
+<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js"></script>
+<script>
+document.onkeydown = function(e) {
+    if (e.keyCode == 27) {
+        document.getElementById('donate').classList.toggle('hide');
+    }
+}
+var clipboard = new Clipboard('.btn_copy');
+clipboard.on('success', function(e) {
+    e.clearSelection();
+});
+</script>
 </body>
 </html>
