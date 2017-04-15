@@ -4,12 +4,14 @@
 	<meta charset="utf-8">
 	<meta name='viewport' content="width=device-width,initial-scale=1">
 	<title>Yusai Works</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
 <style type="text/css">
 body {
     min-height: 100vh;
     background: white;
     margin: 0;
     font-size: 2vmin;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
 }
 
 .column {
@@ -18,7 +20,7 @@ body {
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .center {
@@ -28,12 +30,14 @@ body {
 h1 {
     text-align: center;
     font-size: 3vmin;
+    font-weight: 900;
 }
 
 h2 {
     text-align: center;
     color: deepskyblue;
     font-size: 2.5vmin;
+    font-weight: 900;
 }
 
 #main {
@@ -69,48 +73,6 @@ footer {
     text-align: center;
 }
 
-#donate{
-}
-
-#donate.hide {
-    display: none;
-}
-
-#donate ul {
-    font-size: 1.75vmin;
-}
-
-#donate dt {
-    font-weight: bold;
-}
-
-#donate dt, #donate dd {
-    display: inline-block;
-}
-
-#donate dt::after {
-    content: ':';
-    margin: 0 0.5em;
-}
-
-#donate dt, #donate dt a{
-    color: mediumvioletred;
-}
-
-#donate dl, #donate dd {
-    margin: 0;
-}
-
-.btn_copy {
-    background: mediumvioletred;
-    color: white;
-    border-radius: 10%;
-    padding: 0.2em 0.5em;
-    margin-left: 0.5em;
-    font-size: 1.25vmin;
-    font-weight: bold;
-}
-
 </style>
 </head>
 <body class='column'>
@@ -134,44 +96,9 @@ footer {
                 <li><a href="http://alana.io/">alana.io</a></li>
             </ul>
         </div>
-        <div id='donate' class='hide'>
-            <h2>Donate</h2>
-            <div>
-                <ul>
-                    <li>
-                        <dl>
-                            <dt>Bitcoin</dt><dd><span id='address_btc'>1GVTEWxdUqMrySvZE4ASj6nvYFxHFZsvei</span><span class='btn_copy' data-clipboard-target="#address_btc">copy</span></dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href='https://monacoin.org/'>MONACOIN</a></dt><dd><span id='address_mona'>MSBUsoYEzprfim8P2q9N7HjhnnyC3cf5vt</span><span class='btn_copy' data-clipboard-target="#address_mona">copy</span></dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="http://counterparty.io/">Counterparty</a></dt><dd><span id='address_xcp'>16AWXHfKjozsNTakoLUjwwEsG78CyUUktZ</span><span class='btn_copy' data-clipboard-target="#address_xcp">copy</span></dd>
-                        </dl>
-                    </li>
-                </ul>
-                <p class='bold center'>Thanks for your support.</p>
-            </div>
-        </div>
     </div>
 	<footer>
-		<p class='bold'>@Yusai Works - <a href='https://github.com/Yusai/yusai.github.io'>GitHub</a>/<a href="https://yusai-blog.blogspot.com/">Blog</a></p>
+		<p class='bold'>@Yusai Works - <a href='https://github.com/Yusai/yusai.github.io'>GitHub</a> / <a href="https://yusai-blog.blogspot.com/">Blog</a> / Request</p>
 	</footer>
-<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js"></script>
-<script>
-document.onkeydown = function(e) {
-    if (e.keyCode == 27) {
-        document.getElementById('donate').classList.toggle('hide');
-    }
-}
-var clipboard = new Clipboard('.btn_copy');
-clipboard.on('success', function(e) {
-    e.clearSelection();
-});
-</script>
 </body>
 </html>
