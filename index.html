@@ -10,8 +10,23 @@ body {
     min-height: 100vh;
     background: white;
     margin: 0;
-    font-size: 2vmin;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
+}
+
+body, h1, h2 {
+    font-size: 2.5vmin;
+}
+
+@media screen and (max-width: 768px) {
+    body, h1, h2 {
+        font-size: 5vmin;
+    }
+    #source {
+        font-size: 3.75vmin;
+    }
+    footer {
+        font-size: 3.75vmin;
+    }
 }
 
 .column {
@@ -29,14 +44,12 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 3vmin;
     font-weight: 900;
 }
 
 h2 {
     text-align: center;
     color: deepskyblue;
-    font-size: 2.5vmin;
     font-weight: 900;
 }
 
@@ -55,7 +68,6 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 3.5vmin;
     justify-content: center;
 }
 
